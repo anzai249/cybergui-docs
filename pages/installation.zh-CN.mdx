@@ -1,0 +1,79 @@
+import { Steps } from 'nextra/components'
+
+# 安装
+
+下面介绍如何安装运行环境。
+
+## 环境配置
+
+<Steps>
+
+### 下载源代码
+
+请去[发布页面](https://github.com/anzai249/CyberGui/releases)下载最新版本并解压。
+
+如果您想使用不稳定的开发版，那么请直接克隆：
+
+```shell copy
+git clone https://github.com/anzai249/CyberGui.git
+```
+
+### 数据库
+
+建议使用`MySQL >= 5.7`，开发与测试使用`8.0`版本，若使用较低版本可能出现奇怪的问题。
+
+### 编译与部署
+
+在源代码文件夹执行：
+
+```shell copy
+npm install
+```
+
+生成生产版本：
+
+```shell copy
+npm run build
+```
+
+之后您将可以在`./dist/`目录中发现生成好的前端文件。
+
+### 配置数据库
+
+请使用`./service/cybergui.sql`中的语句进行建表，数据库命名可参见下文。
+
+请在`./service/`目录中创建`secret.json`，内容为：
+
+```json filename="secret.json" copy
+{
+  "mysql": {
+    "dev": {
+      "username": "root",
+      "password": "root",
+      "name": "cybergui",
+      "host": "127.0.0.1"
+    },
+    "prod": {
+      "username": "root",
+      "password": "root",
+      "name": "cybergui",
+      "host": "127.0.0.1"
+    }
+  },
+  "password": "admin"
+}
+```
+
+请注意，`dev`中为开发测试环境数据库账号密码，`prod`中为生产环境数据库账号和密码，`name`为数据库名，`host`为数据库地址，默认端口`3307`。
+
+`password`为管理员登录密码，回答问题时需要验证此password，请及时修改。
+
+### 开启服务端
+
+在`./service/`文件夹中运行即可开启后端：
+
+```shell copy
+node server.js
+```
+
+</Steps>

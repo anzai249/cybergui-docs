@@ -1,0 +1,12 @@
+{
+  "index": "这是什么？",
+  "structure": "结构",
+  "installation": "安装",
+  "configuring": "配置",
+  "contact": {
+    "title": "联系我",
+    "type": "page",
+    "href": "mailto:a381811169@163.com",
+    "newWindow": false
+  }
+}

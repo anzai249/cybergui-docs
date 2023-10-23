@@ -1,0 +1,72 @@
+import { FileTree } from 'nextra/components'
+ 
+
+# 工程结构
+
+本页将具体讲解本项目的文件夹结构，为部署做好准备。
+
+## 您需了解的目录结构
+
+<FileTree>
+  <FileTree.Folder name="service" defaultOpen>
+    <FileTree.Folder name="modules">
+    </FileTree.Folder>
+    <FileTree.Folder name="pages">
+    </FileTree.Folder>
+    <FileTree.Folder name="sql">
+    </FileTree.Folder>
+    <FileTree.File name="cybergui.sql" />
+    <FileTree.File name="secret.json" />
+    <FileTree.File name="server.js" />
+  </FileTree.Folder>
+  <FileTree.Folder name="src" defaultOpen>
+    <FileTree.Folder name="components">
+    </FileTree.Folder>
+    <FileTree.Folder name="lang">
+    </FileTree.Folder>
+    <FileTree.Folder name="pages">
+    </FileTree.Folder>
+    <FileTree.File name="settings.json" />
+  </FileTree.Folder>
+</FileTree>
+
+### 顶级文件夹
+
+| Name                        | Role                   |
+| --------------------------- | ---------------------- |
+| service                     | 服务端                  |
+| src                         | 前端源代码              |
+
+### 次级文件夹
+
+#### service
+
+| Name                        | Role                   |
+| --------------------------- | ---------------------- |
+| modules                     | 服务端模块              |
+| pages                       | 服务端小功能            |
+| sql                         | 数据库相关模块          |
+
+#### src
+
+| Name                        | Role                   |
+| --------------------------- | ---------------------- |
+| components                  | 前端组件                |
+| lang                        | 多语言本地化            |
+| pages                       | 前端页面                |
+
+### 文件
+
+#### service
+
+| Name                        | Role                   |
+| --------------------------- | ---------------------- |
+| cybergui.sql                | 数据库建表语句          |
+| secret.json                 | 数据库与管理员密码       |
+| server.js                   | 服务端主文件            |
+
+#### src
+
+| Name                        | Role                   |
+| --------------------------- | ---------------------- |
+| settings.json               | 前端设置                |
