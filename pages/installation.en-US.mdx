@@ -1,0 +1,107 @@
+import { Steps } from 'nextra/components'
+
+# Installation
+
+The following describes how to install the environment.
+
+## Environment Configuration
+
+<Steps>
+
+### Download the Source Code
+
+Please go to the [Release Page](https://github.com/anzai249/CyberGui/releases) to get the latest version and unzip it.
+
+(Not Recommend) If you want to use the version under development you can clone the repository.
+
+```shell copy
+git clone https://github.com/anzai249/CyberGui.git
+```
+
+### Database
+
+Highly recommend `MySQL >= 5.7`, and the development environment uses `8.0` version, lower version may means unstability.
+
+### Compile and Deploy
+
+Run this at the source code directory:
+
+```shell copy
+npm install
+```
+
+Compile and minify for production:
+
+```shell copy
+npm run build
+```
+
+And then you can check `./dist/` to discover the files you compiled.
+
+### Database Settings
+
+Please use `./service/cybergui.sql` to create your database and database name you will see it below.
+
+Create a `secret.json` at `./service/`, here is the content:
+
+```json filename="secret.json" copy
+{
+  "mysql": {
+    "dev": {
+      "username": "root",
+      "password": "root",
+      "name": "cybergui",
+      "host": "127.0.0.1"
+    },
+    "prod": {
+      "username": "root",
+      "password": "root",
+      "name": "cybergui",
+      "host": "127.0.0.1"
+    }
+  },
+  "password": "admin"
+}
+```
+
+Attention, `dev` contains the information of development environment, `prod`contains the information of production environment, `name` is your database name, `host` is your database host, default port `3306`. 
+
+`username` and `password`, these two are your database username and password.
+
+`password` outside is your admin password in order to answer questions and delete questions or so.
+
+### Frontend Configuration
+
+Please edit `settings.json` at `./src/`:
+
+```json filename="secret.json" copy
+{
+    "images": {
+        "avatar": "",
+        "logo_big": "",
+        "logo_small": ""
+    },
+    "others": {
+        "colors": [
+            "#c3cfe2"
+        ]
+    }
+}
+```
+#### `images`
+
+`avatar` is the avatar of the host of the website, `logo_big` is the desktop logo of the website (top left), `logo_small` is the mobile logo of the website.
+
+#### `others`
+
+`colors` contains a random color list of these anonymous questioners' avatar background, you can add more colors you want.
+
+### Run Server
+
+Run this at `./service/`:
+
+```shell copy
+node server.js
+```
+
+</Steps>

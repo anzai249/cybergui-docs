@@ -1,0 +1,72 @@
+import { FileTree } from 'nextra/components'
+ 
+
+# Project Sturcture
+
+This page will tell you the important structure of this project in order to let you get started quickly.
+
+## The directory you need to know
+
+<FileTree>
+  <FileTree.Folder name="service" defaultOpen>
+    <FileTree.Folder name="modules">
+    </FileTree.Folder>
+    <FileTree.Folder name="pages">
+    </FileTree.Folder>
+    <FileTree.Folder name="sql">
+    </FileTree.Folder>
+    <FileTree.File name="cybergui.sql" />
+    <FileTree.File name="secret.json" />
+    <FileTree.File name="server.js" />
+  </FileTree.Folder>
+  <FileTree.Folder name="src" defaultOpen>
+    <FileTree.Folder name="components">
+    </FileTree.Folder>
+    <FileTree.Folder name="lang">
+    </FileTree.Folder>
+    <FileTree.Folder name="pages">
+    </FileTree.Folder>
+    <FileTree.File name="settings.json" />
+  </FileTree.Folder>
+</FileTree>
+
+### Top Folders
+
+| Name                        | Role                   |
+| --------------------------- | ---------------------- |
+| service                     | Server                 |
+| src                         | Frontend Source Code   |
+
+### Second Folders
+
+#### service
+
+| Name                        | Role                   |
+| --------------------------- | ---------------------- |
+| modules                     | Server Modules         |
+| pages                       | Server Functions       |
+| sql                         | Database Modules       |
+
+#### src
+
+| Name                        | Role                   |
+| --------------------------- | ---------------------- |
+| components                  | Frontend Components    |
+| lang                        | Language Localizations |
+| pages                       | Frontend Pages         |
+
+### Files
+
+#### service
+
+| Name                        | Role                           |
+| --------------------------- | ------------------------------ |
+| cybergui.sql                | Database Creation              |
+| secret.json                 | Database and Admin Passwords   |
+| server.js                   | Main Server                    |
+
+#### src
+
+| Name                        | Role                   |
+| --------------------------- | ---------------------- |
+| settings.json               | Frontend Settings      |

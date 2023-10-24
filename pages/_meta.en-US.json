@@ -1,15 +1,12 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "structure": "Structure",
+  "installation": "Installation",
+  "configuring": "Configuring",
   "contact": {
-    "title": "Contact ↗",
+    "title": "Contace Me",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
+    "href": "mailto:a381811169@163.com",
+    "newWindow": false
   }
 }
