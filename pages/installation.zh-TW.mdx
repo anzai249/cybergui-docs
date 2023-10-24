@@ -1,0 +1,116 @@
+import { Steps } from 'nextra/components'
+
+# 安裝
+
+下面介紹如何安裝執行環境。
+
+## 環境配置
+
+<Steps>
+
+### 下載原始碼
+
+請去[釋出頁面](https://github.com/anzai249/CyberGui/releases)下載最新版本並解壓。
+
+（不建議）如果您想使用不穩定的開發版，那麼請直接克隆：
+
+```shell copy
+git clone https://github.com/anzai249/CyberGui.git
+```
+
+### 資料庫
+
+建議使用`MySQL >= 5.7`，開發與測試使用`8.0`版本，若使用較低版本可能出現奇怪的問題。
+
+### 編譯與部署
+
+在原始碼資料夾執行：
+
+```shell copy
+npm install
+```
+
+生成生產版本：
+
+```shell copy
+npm run build
+```
+
+之後您將可以在`./dist/`目錄中發現生成好的前端檔案。
+
+### 配置資料庫
+
+請使用`./service/cybergui.sql`中的語句進行建表，資料庫命名可參見下文。
+
+請在`./service/`目錄中建立`secret.json`，內容為：
+
+```json filename="secret.json" copy
+{
+  "mysql": {
+    "dev": {
+      "username": "root",
+      "password": "root",
+      "name": "cybergui",
+      "host": "127.0.0.1"
+    },
+    "prod": {
+      "username": "root",
+      "password": "root",
+      "name": "cybergui",
+      "host": "127.0.0.1"
+    }
+  },
+  "password": "admin"
+}
+```
+
+請注意，`dev`中為開發測試環境資料庫賬號密碼，`prod`中為生產環境資料庫賬號和密碼，`name`為資料庫名，`host`為資料庫地址，預設埠`3306`。
+
+`password`為管理員登入密碼，回答問題時需要驗證此password，請及時修改。
+
+### 配置前端
+
+請在`./src/`目錄中編輯`settings.json`，內容為：
+
+```json filename="secret.json" copy
+{
+    "images": {
+        "avatar": "",
+        "logo_big": "",
+        "logo_small": ""
+    },
+    "others": {
+        "colors": [
+            "#c3cfe2"
+        ],
+        "defaultLanguage": "zhcn"
+    },
+    "theme": {
+        "primaryColor": "#8a2be2",
+        "primaryColorHover": "#8a2be2"
+    }
+}
+```
+#### `images`
+
+`avatar`中存放網站主人頭像，`logo_big`存放桌面端Logo（左上角），`logo_small`存放移動端Logo。
+
+#### `others`
+
+`colors`中存放匿名提問問題者的隨機頭像背景色列表，預設只有一個。
+
+透過調節`defaultLanguage`改變頁面預設語言，目前支援`enus`, `zhcn`, `zhtw` 和 `zhsb`。
+
+#### `theme`
+
+你可以為頁面定製主題色。
+
+### 開啟服務端
+
+在`./service/`資料夾中執行即可開啟後端：
+
+```shell copy
+node server.js
+```
+
+</Steps>
