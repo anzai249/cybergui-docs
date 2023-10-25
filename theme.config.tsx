@@ -22,6 +22,12 @@ const config: DocsThemeConfig = {
       <span style={{ marginLeft: '.4em', fontWeight: 800 }}>CyberGui Docs</span>
     </>
   ),
+  head: (
+    <>
+      <meta property="og:description" content="CyberGui Official Docs" />
+      <link rel="icon" href="/favicon.svg"></link>
+    </>
+  ),
   i18n: [
     { locale: 'en-US', text: 'English' },
     { locale: 'zh-CN', text: '简体中文' },

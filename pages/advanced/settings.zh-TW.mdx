@@ -1,0 +1,107 @@
+# `settings.json`
+
+本頁介紹`settings.json`的具體結構與作用。
+
+```json filename="settings.json" copy
+{
+    "images": {
+        "avatar": "",
+        "logo_big": "",
+        "logo_small": ""
+    },
+    "others": {
+        "colors": [
+            "#c3cfe2"
+        ],
+        "defaultLanguage": "enus"
+    },
+    "theme": {
+        "primaryColor": "#8a2be2",
+        "primaryColorHover": "#8a2be2"
+    }
+}
+```
+
+## `images`
+
+用於設定各種圖片。
+
+### `images.avatar`
+
+用於指定回答問題時顯示的頭像，一般是網站主人的頭像。
+
+類型：`String`
+
+預設值：`./assets/Avatar.jpg`
+
+![DefaultAvatar](../images/Avatar.jpg)
+
+### `images.logo_big`
+
+位於網站左上角的Logo。
+
+類型：`String`
+
+預設值：`./assets/logo.png`
+
+### `images.logo_small`
+
+移動端位於網站左上角的Logo。
+
+類型：`String`
+
+預設值：`./assets/logoMobile.png`
+
+## `others`
+
+其他設定。
+
+### `others.colors`
+
+提問者頭像背景隨機顏色列錶，請使用十六進制顏色。
+
+類型：`Array`
+
+成員類型：`String`
+
+預設值：`[ "#c3cfe2" ]`
+
+舉例：`[ "#c3cfe2", "#8a2be2"]`
+
+### `others.defaultLanguage`
+
+預設顯示語言，第一次訪問網站時顯示此語言，之後跟隨Cookie。
+
+類型：`String`
+
+預設值：`enus`
+
+可用語言：
+
+| `defaultLanguage`           | Language Name In Website | Language    |
+| --------------------------- | ------------------------ | ----------- |
+| `enus`                      | English                  | 英語        |
+| `zhcn`                      | 简体中文                  | 簡體中文    |
+| `zhtw`                      | 繁體中文                  | 繁體中文    |
+| `jajp`                      | 日本語                    | 日語        |
+| `zhsb`                      | 減啼忠吻                  | ？？？      |
+
+## `theme`
+
+主題色等。
+
+### `theme.primaryColor`
+
+網站主題色，請使用十六進制顏色。
+
+類型：`String`
+
+預設值：`#8a2be2`
+
+### `theme.primaryColorHover`
+
+網站滑鼠懸停主題色，請使用十六進制顏色。
+
+類型：`String`
+
+預設值：`#8a2be2`

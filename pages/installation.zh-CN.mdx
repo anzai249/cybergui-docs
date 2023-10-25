@@ -22,22 +22,6 @@ git clone https://github.com/anzai249/CyberGui.git
 
 建议使用`MySQL >= 5.7`，开发与测试使用`8.0`版本，若使用较低版本可能出现奇怪的问题。
 
-### 编译与部署
-
-在源代码文件夹执行：
-
-```shell copy
-npm install
-```
-
-生成生产版本：
-
-```shell copy
-npm run build
-```
-
-之后您将可以在`./dist/`目录中发现生成好的前端文件。
-
 ### 配置数据库
 
 请使用`./service/cybergui.sql`中的语句进行建表，数据库命名可参见下文。
@@ -70,9 +54,11 @@ npm run build
 
 ### 配置前端
 
+阅读更多：[settings.json](./advanced/settings)
+
 请在`./src/`目录中编辑`settings.json`，内容为：
 
-```json filename="secret.json" copy
+```json filename="settings.json" copy
 {
     "images": {
         "avatar": "",
@@ -104,6 +90,22 @@ npm run build
 #### `theme`
 
 你可以为页面定制主题色。
+
+### 编译与部署
+
+在源代码文件夹执行：
+
+```shell copy
+npm install
+```
+
+生成生产版本：
+
+```shell copy
+npm run build
+```
+
+之后您将可以在`./dist/`目录中发现生成好的前端文件。
 
 ### 开启服务端
 
