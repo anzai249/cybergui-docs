@@ -7,7 +7,8 @@ This page will introduce detailed usage of `settings.json`.
     "images": {
         "avatar": "",
         "logo_big": "",
-        "logo_small": ""
+        "logo_small": "",
+        "language_flags": {}
     },
     "others": {
         "colors": [
@@ -52,6 +53,35 @@ Type: `String`
 
 Default value: `./assets/logoMobile.png`
 
+### `language_flags`
+
+The flag icon of the languages.
+
+Type: `Object`
+
+Default value: 
+
+``` json
+{
+    "enus": "./assets/flags/gb.png",
+    "zhcn": "./assets/flags/cn.png",
+    "zhtw": "./assets/flags/tw.png",
+    "ja": "./assets/flags/jp.png",
+    "de": "./assets/flags/de.png",
+    "zhsb": "./assets/flags/unknown.png"
+}
+```
+
+These icons are all from [flagcdn](https://flagcdn.com/), because of the internet restrictions of some regions, the default icons are all downloaded, you can change it to anyother api you want.
+
+Example: 
+
+``` json
+{
+    "enus": "https://flagcdn.com/40x30/gb.png"
+}
+```
+
 ## `others`
 
 Other settings.
@@ -83,7 +113,8 @@ Languages available:
 | `enus`                      | English                  | English               |
 | `zhcn`                      | 简体中文                  | Simplified Chinese    |
 | `zhtw`                      | 繁體中文                  | Traditional Chinese   |
-| `jajp`                      | 日本語                    | Japanese              |
+| `ja`                        | 日本語                    | Japanese              |
+| `de`                        | Deutsch                  | German                |
 | `zhsb`                      | 减啼忠吻                  | Meme Language         |
 
 ## `theme`

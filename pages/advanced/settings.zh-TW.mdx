@@ -7,7 +7,8 @@
     "images": {
         "avatar": "",
         "logo_big": "",
-        "logo_small": ""
+        "logo_small": "",
+        "language_flags": {}
     },
     "others": {
         "colors": [
@@ -52,6 +53,35 @@
 
 預設值：`./assets/logoMobile.png`
 
+### `language_flags`
+
+語言旗幟圖示。
+
+型別：`Object`
+
+預設值：
+
+``` json
+{
+    "enus": "./assets/flags/gb.png",
+    "zhcn": "./assets/flags/cn.png",
+    "zhtw": "./assets/flags/tw.png",
+    "ja": "./assets/flags/jp.png",
+    "de": "./assets/flags/de.png",
+    "zhsb": "./assets/flags/unknown.png"
+}
+```
+
+這些圖示都是從[flagcdn](https://flagcdn.com/)下載來的，flagcdn在一些地區無法訪問，所以都存在了倉庫裡，你可以給改成任何連結。
+
+例子：
+
+``` json
+{
+    "enus": "https://flagcdn.com/40x30/gb.png"
+}
+```
+
 ## `others`
 
 其他設定。
@@ -84,6 +114,7 @@
 | `zhcn`                      | 简体中文                  | 簡體中文    |
 | `zhtw`                      | 繁體中文                  | 繁體中文    |
 | `jajp`                      | 日本語                    | 日語        |
+| `de`                        | Deutsch                  | 德語        |
 | `zhsb`                      | 減啼忠吻                  | ？？？      |
 
 ## `theme`
