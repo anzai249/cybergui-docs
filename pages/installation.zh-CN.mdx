@@ -20,11 +20,13 @@ git clone https://github.com/anzai249/CyberGui.git
 
 ### 数据库
 
-建议使用`MySQL >= 5.7`，开发与测试使用`8.0`版本，若使用较低版本可能出现奇怪的问题。
+建议使用`MySQL >= 5.7`，开发与测试使用`8.0`版本，若使用较低版本可能出现奇怪的问题。如果是`8.0`以上版本，请使用`mysql_native_password`密码加密方式。
 
 ### 配置数据库
 
 请使用`./service/cybergui.sql`中的语句进行建表，数据库命名可参见下文。
+
+阅读更多：[secret.json](./advanced/secret)
 
 请在`./service/`目录中创建`secret.json`，内容为：
 
@@ -92,6 +94,8 @@ git clone https://github.com/anzai249/CyberGui.git
 你可以为页面定制主题色。
 
 ### 编译与部署
+
+建议Node.js版本`16.x`
 
 在源代码文件夹执行：
 

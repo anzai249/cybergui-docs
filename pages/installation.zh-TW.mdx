@@ -24,7 +24,9 @@ git clone https://github.com/anzai249/CyberGui.git
 
 ### 配置資料庫
 
-請使用`./service/cybergui.sql`中的語句進行建表，資料庫命名可參見下文。
+請使用`./service/cybergui.sql`中的語句進行建表，資料庫命名可參見下文。如果是`8.0`以上版本，請使用`mysql_native_password`密碼加密方式。
+
+閲讀更多：[secret.json](./advanced/secret)
 
 請在`./service/`目錄中建立`secret.json`，內容為：
 
@@ -93,6 +95,8 @@ git clone https://github.com/anzai249/CyberGui.git
 你可以為頁面定製主題色。
 
 ### 編譯與部署
+
+建議Node.js版本`16.x`
 
 在原始碼資料夾執行：
 

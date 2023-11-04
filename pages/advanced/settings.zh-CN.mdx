@@ -11,14 +11,14 @@
         "language_flags": {}
     },
     "others": {
-        "colors": [
-            "#c3cfe2"
-        ],
-        "defaultLanguage": "enus"
+        "colors": [],
+        "defaultLanguage": "",
+        "serverHost": "",
+        "serverPort": ""
     },
     "theme": {
-        "primaryColor": "#8a2be2",
-        "primaryColorHover": "#8a2be2"
+        "primaryColor": "",
+        "primaryColorHover": ""
     }
 }
 ```
@@ -76,9 +76,17 @@
 
 例子：
 
-``` json
+``` json copy
 {
     "enus": "https://flagcdn.com/40x30/gb.png"
+}
+```
+
+如果您在中国大陆，强烈建议加入下面这一条将以确保您的网站能够正常上线。
+
+``` json copy
+{
+    "zhtw": "https://flagcdn.com/40x30/hk.png"
 }
 ```
 
@@ -115,7 +123,24 @@
 | `zhtw`                      | 繁體中文                  | 繁体中文    |
 | `ja`                        | 日本語                    | 日语        |
 | `de`                        | Deutsch                  | 德语        |
+| `ru`                        | Русский                  | 俄语        |
 | `zhsb`                      | 减啼忠吻                  | ？？？      |
+
+### `others.serverHost`
+
+服务端地址。
+
+类型：`String`
+
+默认值：`127.0.0.1`
+
+### `others.serverPort`
+
+服务端端口。
+
+类型：`String`
+
+默认值：`1106`
 
 ## `theme`
 

@@ -20,11 +20,13 @@ git clone https://github.com/anzai249/CyberGui.git
 
 ### Database
 
-Highly recommend `MySQL >= 5.7`, and the development environment uses `8.0` version, lower version may means unstability.
+Highly recommend `MySQL >= 5.7`, and the development environment uses `8.0` version, lower version may means unstability. If you use `>= 8.0`, please use `mysql_native_password` password encryption.
 
 ### Database Settings
 
 Please use `./service/cybergui.sql` to create your database and database name you will see it below.
+
+Read more: [secret.json](./advanced/secret)
 
 Create a `secret.json` at `./service/`, here is the content:
 
@@ -94,6 +96,8 @@ Please edit `settings.json` at `./src/`:
 You can set theme color of the website.
 
 ### Compile and Deploy
+
+Recommend Node.js version `16.x`.
 
 Run this at the source code directory:
 
