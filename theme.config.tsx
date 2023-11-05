@@ -5,7 +5,7 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/anzai249/CyberGui',
   },
-  docsRepositoryBase: 'https://github.com/anzai249/cybergui-docs',
+  docsRepositoryBase: 'https://github.com/anzai249/cybergui-docs/tree/main',
   footer: {
     text: 'CyberGui Docs',
   },
