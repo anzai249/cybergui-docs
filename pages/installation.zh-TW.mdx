@@ -46,11 +46,17 @@ git clone https://github.com/anzai249/CyberGui.git
       "host": "127.0.0.1"
     }
   },
-  "password": "admin"
+  "password": "admin",
+  "https": true,
+  "serverPort": 1106,
+  "key": "path/to/your.key",
+  "cert": "path/to/your.pem"
 }
 ```
 
 請注意，`dev`中為開發測試環境資料庫賬號密碼，`prod`中為生產環境資料庫賬號和密碼，`name`為資料庫名，`host`為資料庫地址，預設埠`3306`。
+
+建議開啟https連線服務端，並指定你的SSL證書路徑。
 
 `password`為管理員登入密碼，回答問題時需要驗證此password，請及時修改。
 

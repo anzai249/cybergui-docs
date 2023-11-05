@@ -46,13 +46,19 @@ Create a `secret.json` at `./service/`, here is the content:
       "host": "127.0.0.1"
     }
   },
-  "password": "admin"
+  "password": "admin",
+  "https": true,
+  "serverPort": 1106,
+  "key": "path/to/your.key",
+  "cert": "path/to/your.pem"
 }
 ```
 
 Attention, `dev` contains the information of development environment, `prod`contains the information of production environment, `name` is your database name, `host` is your database host, default port `3306`. 
 
 `username` and `password`, these two are your database username and password.
+
+It is recommended to switch on https connection to server and specify the path to your SSL certificate.
 
 `password` outside is your admin password in order to answer questions and delete questions or so.
 
