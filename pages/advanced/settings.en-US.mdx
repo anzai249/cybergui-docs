@@ -1,3 +1,5 @@
+import { Callout } from 'nextra/components'
+
 # `settings.json`
 
 This page will introduce detailed usage of `settings.json`.
@@ -14,7 +16,8 @@ This page will introduce detailed usage of `settings.json`.
         "colors": [],
         "defaultLanguage": "",
         "serverHost": "",
-        "serverPort": ""
+        "serverPort": "",
+        "review": 
     },
     "theme": {
         "primaryColor": "",
@@ -135,6 +138,16 @@ Server port.
 Type: `String`
 
 Default value: `1106`
+
+### `others.review`
+
+Whether the questions need review before showing.
+ 
+<Callout type="warning" emoji="⚠️">
+  Please set `review` in `secret.json` the same with this to avoid causing bugs.
+</Callout>
+
+Type: `Boolean`
 
 ## `theme`
 

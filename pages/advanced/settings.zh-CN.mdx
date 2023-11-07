@@ -1,3 +1,5 @@
+import { Callout } from 'nextra/components'
+
 # `settings.json`
 
 本页介绍`settings.json`的具体结构与作用。
@@ -14,7 +16,8 @@
         "colors": [],
         "defaultLanguage": "",
         "serverHost": "",
-        "serverPort": ""
+        "serverPort": "",
+        "review": 
     },
     "theme": {
         "primaryColor": "",
@@ -143,6 +146,16 @@
 类型：`String`
 
 默认值：`1106`
+
+### `others.review`
+
+问题是否需要审核之后再展示。
+ 
+<Callout type="warning" emoji="⚠️">
+  请把`secret.json`中的`review`设置的和这个一样以免出现怪异的bug。
+</Callout>
+
+类型：`Boolean`
 
 ## `theme`
 

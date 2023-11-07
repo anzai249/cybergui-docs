@@ -50,7 +50,8 @@ git clone https://github.com/anzai249/CyberGui.git
   "https": true,
   "serverPort": 1106,
   "key": "path/to/your.key",
-  "cert": "path/to/your.pem"
+  "cert": "path/to/your.pem",
+  "review": false
 }
 ```
 
@@ -59,6 +60,8 @@ git clone https://github.com/anzai249/CyberGui.git
 建議開啟https連線服務端，並指定你的SSL證書路徑。
 
 `password`為管理員登入密碼，回答問題時需要驗證此password，請及時修改。
+
+`review` 如果你覺得提問需要審核後再展示，請設定為`true`, 不要忘記設定`settings.json`裡面的`review`。
 
 ### 配置前端
 
@@ -77,7 +80,8 @@ git clone https://github.com/anzai249/CyberGui.git
         "colors": [
             "#c3cfe2"
         ],
-        "defaultLanguage": "zhcn"
+        "defaultLanguage": "zhcn",
+        "review": false
     },
     "theme": {
         "primaryColor": "#8a2be2",
@@ -94,7 +98,9 @@ git clone https://github.com/anzai249/CyberGui.git
 
 `colors`中存放匿名提問問題者的隨機頭像背景色列表，預設只有一個。
 
-透過調節`defaultLanguage`改變頁面預設語言，目前支援`enus`, `zhcn`, `zhtw` 和 `zhsb`。
+透過調節`defaultLanguage`改變頁面預設語言，可用語言參見[othersdefaultlanguage](./advanced/settings#othersdefaultlanguage)。
+
+`review` 如果你覺得提問需要審核後再展示，請設定為`true`, 不要忘記設定`secret.json`裡面的`review`。
 
 #### `theme`
 

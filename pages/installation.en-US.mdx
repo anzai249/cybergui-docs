@@ -50,7 +50,8 @@ Create a `secret.json` at `./service/`, here is the content:
   "https": true,
   "serverPort": 1106,
   "key": "path/to/your.key",
-  "cert": "path/to/your.pem"
+  "cert": "path/to/your.pem",
+  "review": false
 }
 ```
 
@@ -79,7 +80,8 @@ Please edit `settings.json` at `./src/`:
         "colors": [
             "#c3cfe2"
         ],
-        "defaultLanguage": "zhcn"
+        "defaultLanguage": "zhcn",
+        "review": false
     },
     "theme": {
         "primaryColor": "#8a2be2",
@@ -95,7 +97,9 @@ Please edit `settings.json` at `./src/`:
 
 `colors` contains a random color list of these anonymous questioners' avatar background, you can add more colors you want.
 
-`defaultLanguage` default language of the website, currently supports `enus`, `zhcn`, `zhtw` and `zhsb`
+`defaultLanguage` default language of the website, currently supports [othersdefaultlanguage](./advanced/settings#othersdefaultlanguage).
+
+`review` If you think the questions need your review before showing, please set it to `true`, and don't forget to set `review` in `secret.json`.
 
 #### `theme`
 
