@@ -125,10 +125,16 @@ And then you can check `./dist/` to discover the files you compiled.
 
 ### Run Server
 
+Install `pm2` globally:
+
+```shell copy
+npm install pm2 -g
+```
+
 Run this at `./service/`:
 
 ```shell copy
-node server.js
+pm2 start server.js
 ```
 
 </Steps>

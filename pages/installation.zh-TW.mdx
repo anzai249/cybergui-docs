@@ -126,10 +126,16 @@ npm run build
 
 ### 開啟服務端
 
+安裝`pm2`：
+
+```shell copy
+npm install pm2 -g
+```
+
 在`./service/`資料夾中執行即可開啟後端：
 
 ```shell copy
-node server.js
+pm2 start server.js
 ```
 
 </Steps>
